@@ -3,14 +3,14 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 
+const api_key = "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";
 const app = express();
 const nodemailer = require('nodemailer');
 const sendgridTransport = require('nodemailer-sendgrid-transport');
 const transporter = nodemailer.createTransport(
   sendgridTransport({
     auth: {
-      api_key:
-        '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'
+	      api_key:api_key
     }
   })
 );
